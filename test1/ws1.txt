@@ -15,4 +15,4 @@ As regularly as possible, particularly after making big changes
 
 - True or False, you should commit all files (including binaries, images, and log files) to Git.
 
-True, you should commit everything to Git
+True, you should commit everything to Git.
