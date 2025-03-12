@@ -1,20 +1,26 @@
 #include <unordered_map>
 
 double weighted_average(int array[], int n) {
-    if (n < 1) return 0.0; // Return 0 if the size is less than 1
+  if (n < 1) return 0;  // Return 0 if the size is less than 1
 
-    std::unordered_map<int, int> frequency;
-    double sum = 0.0;
+  int weight=0;
+  
+  std::unordered_map<int, int> frequency;  // To store frequencies of elements
+  double weight_sum = 0.0;
+  double total_weight=0.0;
 
-    // Calculate frequencies
-    for (int i = 0; i < n; i++) {
-        frequency[array[i]]++;
-    }
+  // Calculate frequencies
+  for (int i = 0; i < n; i++) {
+    frequency[array[i]]++;
+  }
 
-    // Compute weighted sum
-    for (std::unordered_map<int, int>::iterator it = frequency.begin(); it != frequency.end(); ++it) {
-        sum += it->first * (static_cast<double>(it->second) / n);
-    }
+  for (int i = 0; i < n; i++) {
+    weight = (array[i] * frequency[array[i]]);
+    weight_sum = weight + weight_sum;
+    total_weight = frequency[array[i]] + total_weight;
+  }
 
-    return sum;
+  double weighted_average = weight_sum/total_weight;
+
+  return weighted_average;
 }
