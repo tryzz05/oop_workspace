@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm>
+int median_array(int array[], int n);
 
 int main() {
     int arr1[] = {3, 5, 2, 1, 4};

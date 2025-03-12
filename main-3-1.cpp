@@ -1,4 +1,5 @@
 #include <iostream>
+bool is_fanarray(int array[], int n);
 
 int main() {
     int arr1[] = {1, 2, 3, 2, 1};
