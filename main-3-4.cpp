@@ -1,4 +1,5 @@
 #include <iostream>
+void check_grade(char grade);
 
 int main() {
     check_grade('A'); // Pass

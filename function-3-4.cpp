@@ -1,3 +1,5 @@
+#include <iostream>
+
 void check_grade(char grade) {
     switch (grade) {
         case 'A':
