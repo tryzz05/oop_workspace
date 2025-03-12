@@ -7,10 +7,10 @@ int main() {
     int arr3[] = {10}; // Single element
     int arr4[] = {}; // Empty array
 
-    std::cout << "Weighted average of arr1: " << weighted_average(arr1, 6) << "\n"; // 3.0
-    std::cout << "Weighted average of arr2: " << weighted_average(arr2, 5) << "\n"; // 5.0
-    std::cout << "Weighted average of arr3: " << weighted_average(arr3, 1) << "\n"; // 10.0
-    std::cout << "Weighted average of arr4: " << weighted_average(arr4, 0) << "\n"; // 0.0
+    std::cout << "Weighted average of Array 1: " << weighted_average(arr1, 6) << "\n"; // 3.0
+    std::cout << "Weighted average of Array 2: " << weighted_average(arr2, 5) << "\n"; // 5.0
+    std::cout << "Weighted average of Array 3: " << weighted_average(arr3, 1) << "\n"; // 10.0
+    std::cout << "Weighted average of Array 4: " << weighted_average(arr4, 0) << "\n"; // 0.0
 
     return 0;
 }
