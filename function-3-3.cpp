@@ -12,8 +12,8 @@ double weighted_average(int array[], int n) {
     }
 
     // Compute weighted sum
-    for (const auto& pair : frequency) {
-        sum += pair.first * (static_cast<double>(pair.second) / n);
+    for (std::unordered_map<int, int>::iterator it = frequency.begin(); it != frequency.end(); ++it) {
+        sum += it->first * (static_cast<double>(it->second) / n);
     }
 
     return sum;
