@@ -1,10 +1,10 @@
 #include <iostream>
-void check_grade(char grade);
+void print_pass_fail(char grade);
 
 int main() {
-    check_grade('A'); // Pass
-    check_grade('C'); // Pass
-    check_grade('E'); // Fail
-    check_grade('G'); // Nothing
+    print_pass_fail('A'); // Pass
+    print_pass_fail('C'); // Pass
+    print_pass_fail('E'); // Fail
+    print_pass_fail('G'); // Nothing
     return 0;
 }
