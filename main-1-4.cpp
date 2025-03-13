@@ -12,4 +12,5 @@ int multiplier = 5;
 
     print_scaled(matrix, multiplier);
 
+    return 0;
 }
