@@ -26,7 +26,11 @@
 	clang++ function-2-2.cpp main-2-2.cpp -o 2-2
 	./2-2
 
-all: 1-1 1-2 1-3 1-4 1-5 2-1 2-2
+2-3: function-2-3.cpp main-2-3.cpp
+	clang++ function-2-3.cpp main-2-3.cpp -o 2-3
+	./2-3
+
+all: 1-1 1-2 1-3 1-4 1-5 2-1 2-2 2-3
 
 clear:
-	rm -f 1-1 1-2 1-3 1-4 1-5 2-1 2-2
+	rm -f 1-1 1-2 1-3 1-4 1-5 2-1 2-2 2-3
