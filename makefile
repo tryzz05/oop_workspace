@@ -18,7 +18,11 @@
 	clang++ function-1-5.cpp main-1-5.cpp -o 1-5
 	./1-5
 
-all: 1-1 1-2 1-3 1-4 1-5
+2-1: function-2-1.cpp main-2-1.cpp
+	clang++ function-2-1.cpp main-2-1.cpp -o 2-5
+	./2-5
+
+all: 1-1 1-2 1-3 1-4 1-5 2-1
 
 clear:
-	rm -f 1-1 1-2 1-3 1-4 1-5
+	rm -f 1-1 1-2 1-3 1-4 1-5 2-1
