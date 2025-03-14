@@ -2,7 +2,7 @@
 
 void print_binary_str(std::string decimal_number)
 {
-    int integer = std::stoi(decimal_number);
+    int integer = std::stoi(decimal_number, nullptr, 10);
         std::string binary = "";
         if (integer == 0) {
             std::cout << "0" << std::endl;

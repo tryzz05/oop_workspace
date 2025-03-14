@@ -19,10 +19,14 @@
 	./1-5
 
 2-1: function-2-1.cpp main-2-1.cpp
-	clang++ function-2-1.cpp main-2-1.cpp -o 2-5
-	./2-5
+	clang++ function-2-1.cpp main-2-1.cpp -o 2-1
+	./2-1
 
-all: 1-1 1-2 1-3 1-4 1-5 2-1
+2-2: function-2-2.cpp main-2-2.cpp
+	clang++ function-2-2.cpp main-2-2.cpp -o 2-2
+	./2-2
+
+all: 1-1 1-2 1-3 1-4 1-5 2-1 2-2
 
 clear:
-	rm -f 1-1 1-2 1-3 1-4 1-5 2-1
+	rm -f 1-1 1-2 1-3 1-4 1-5 2-1 2-2
