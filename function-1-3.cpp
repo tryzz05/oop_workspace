@@ -1,13 +1,15 @@
 #include <iostream>
 
 double* duplicateArray(double* array, int size) {
-    double matrix[size];
-    for (int i=0; i<size; ++i){
-        matrix[i] = *(array+i);
+    if (size <=0) {
+        return nullptr;
     }
 
-    double* p = &matrix[0];
+    double* matrix = new double[size];
+    for (int i=0; i<size; ++i){
+        matrix[i] = array[i];
+    }
 
-    return p;
+    return matrix;
 
 }
