@@ -9,3 +9,7 @@
 3-1: function-3-1.h main-3-1.cpp
 	clang++ function-3-1.cpp main-3-1.cpp -o 3-1
 	./3-1
+
+3-2: function-3-2.h main-3-2.cpp
+	clang++ function-3-2.cpp main-3-2.cpp -o 3-2
+	./3-2
