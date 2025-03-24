@@ -45,5 +45,4 @@ void hexDigits(int *numbers, int length)
         cout << *(numbers + i) << endl;
     }
     delete numbers;
-    return;
 }
