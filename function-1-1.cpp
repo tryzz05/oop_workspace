@@ -15,4 +15,5 @@ void printNumbers(int *numbers,int length) {
     for (int i =0; i<10; ++i) {
         cout << i << " " << *(numbers+i) << endl;
     }
+    delete numbers;
 }
