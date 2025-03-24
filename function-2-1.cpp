@@ -15,10 +15,7 @@ int *readNumbers()
 
 void hexDigits(int *numbers, int length)
 {
-    if (length <= 0)
-    {
-        return;
-    }
+
     for (int i = 0; i < 10; ++i)
     {
         cout << i << " " << *(numbers + i) << " ";
