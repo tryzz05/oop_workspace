@@ -6,7 +6,6 @@ int *readNumbers() {
     
     for (int i =0; i<10; ++i) {
         cin >> *(matrix+i);
-        cout << endl;
     }
 
     return matrix;
