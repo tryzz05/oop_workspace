@@ -2,6 +2,10 @@
 #include "function-2-1.h"
 
 int main() {
-    hexDigits(readNumbers(), 10);
+    int *matrix = readNumbers();
+    hexDigits(matrix, 10);
+
+    delete matrix;
+
     return 0;
 }

@@ -2,6 +2,10 @@
 #include "function-1-1.h"
 
 int main() {
-    printNumbers(readNumbers(), 10);
+    int *matrix = readNumbers();
+    printNumbers(matrix, 10);
+
+    delete matrix;
+
     return 0;
 }
