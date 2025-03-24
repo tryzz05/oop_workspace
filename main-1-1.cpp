@@ -1,6 +1,5 @@
 #include <iostream>
-int *readNumbers();
-void printNumbers(int *numbers,int length) ;
+#include "function-1-1.h"
 
 int main() {
     printNumbers(readNumbers(), 10);

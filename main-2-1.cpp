@@ -1,6 +1,5 @@
 #include <iostream>
-int *readNumbers();
-void hexDigits(int *numbers, int length);
+#include "function-2-1.h"
 
 int main() {
     hexDigits(readNumbers(), 10);
