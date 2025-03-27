@@ -1,11 +1,20 @@
 #include <iostream>
+#include "Person.h"
 #include "function-1-1.h"
+using namespace std;
 
 int main() {
-    int *matrix = readNumbers();
-    printNumbers(matrix, 10);
+    int numberPeople;
+    cout << "Enter number of people: ";
+    cin >> numberPeople;
 
-    delete matrix;
+    Person* people = createPersonArray(numberPeople);
+
+    for (int i =0; i<numberPeople; ++i) {
+        std::cout << "Person " << (i+1) << ": " << people[i].name << ", " << people[i].age << endl;
+    }
+
+    delete[] people;
 
     return 0;
 }

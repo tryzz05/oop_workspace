@@ -1,22 +1,13 @@
 #include <iostream>
-#include "function-1-1.h"
-using namespace std;
+#include "Person.h"
 
-int *readNumbers() {
-    int* matrix = new int[10];
-    
-    for (int i =0; i<10; ++i) {
-        cin >> *(matrix+i);
+Person* createPersonArray(int n) {
+    Person* arrayPerson = new Person[n];
+    for (int i = 0; i < n; ++i) {
+        (arrayPerson+i)->name = "John Doe";
+        (arrayPerson+i)->age = 0;
     }
 
-    return matrix;
-}
+    return arrayPerson;
 
-void printNumbers(int *numbers,int length) {
-    if (length <=0) {
-        return;
-    }
-    for (int i =0; i<10; ++i) {
-        cout << i << " " << *(numbers+i) << endl;
-    }
 }
