@@ -1,38 +1,46 @@
 #include <iostream>
-#include <vector>
 #include "Car.h"
 #include "Bus.h"
 #include "Motorbike.h"
 
 int main() {
-    int numVehicles;
-    std::cout << "Enter the number of vehicles: ";
-    std::cin >> numVehicles;
+    int n, type, id = 1;
+    std::cout << "Enter number of vehicles: ";
+    std::cin >> n;
 
-    std::vector<Vehicle*> vehicles;
+    Vehicle** vehicles = new Vehicle*[n];
 
-    for (int i = 0; i < numVehicles; ++i) {
-        int type, id;
-        std::cout << "Enter Vehicle Type (1-Car, 2-Bus, 3-Motorbike): ";
+    for (int i = 0; i < n; i++) {
+        std::cout << "Enter type of vehicle (1-Car, 2-Bus, 3-Motorbike): ";
         std::cin >> type;
-        std::cout << "Enter Vehicle ID: ";
-        std::cin >> id;
 
-        if (type == 1) {
-            vehicles.push_back(new Car(id));
-        } else if (type == 2) {
-            vehicles.push_back(new Bus(id));
-        } else if (type == 3) {
-            vehicles.push_back(new Motorbike(id));
-        } else {
-            std::cout << "Invalid type! Skipping...\n";
+        if (type == 1)
+            vehicles[i] = new Car(id++);
+        else if (type == 2)
+            vehicles[i] = new Bus(id++);
+        else if (type == 3)
+            vehicles[i] = new Motorbike(id++);
+        else {
+            std::cout << "Invalid type\n";
+            i--;
         }
     }
 
-    std::cout << "\nParking Durations:\n";
-    for (int i = 0; i < numVehicles; i++) {
-        vehicles[i]->getParkingDuration();
+    std::cout << "Waiting for some time to simulate parking duration...\n";
+    std::cout << "Press enter to continue...\n";
+    std::cin.ignore();
+    std::cin.get();
+
+    for (int i = 0; i < n; i++) {
+        std::cout << "Vehicle ID: " << vehicles[i]->getID()
+                  << " Parking Duration (after reduction): "
+                  << vehicles[i]->getParkingDuration() << " seconds" << std::endl;
     }
+
+    for (int i = 0; i < n; i++) {
+        delete vehicles[i];
+    }
+    delete[] vehicles;
 
     return 0;
 }

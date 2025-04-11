@@ -1,9 +1,13 @@
 #include "Vehicle.h"
 
-Vehicle::Vehicle(int entryTime) {
-    timeOfEntry = entryTime;
+Vehicle::Vehicle(int id) : ID(id), timeOfEntry(std::time(0)) {}
+
+int Vehicle::getID() const {
+    return ID;
 }
 
-int Vehicle::getParkingDuration() const {
-    return std::difftime(std::time(nullptr), timeOfEntry);
+std::time_t Vehicle::getTimeOfEntry() const {
+    return timeOfEntry;
 }
+
+Vehicle::~Vehicle() {}

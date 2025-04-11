@@ -5,19 +5,17 @@
 
 class Vehicle {
 private:
-    time_t timeOfEntry;
     int ID;
+    std::time_t timeOfEntry;
+
+protected:
+    std::time_t getTimeOfEntry() const;
 
 public:
     Vehicle(int id);
     int getID() const;
-    virtual int getParkingDuration() const;
-
-protected:
-    time_t getTimeOfEntry() const {
-        return timeOfEntry;
-    }
-
+    virtual int getParkingDuration() const = 0;
+    virtual ~Vehicle();
 };
 
 #endif
