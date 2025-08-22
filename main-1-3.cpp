@@ -7,11 +7,20 @@ int main() {
     cout << "Enter number of people: ";
     cin >> numberPeople;
 
-    PersonList list = createPersonList(numberPeople);
+    PersonList topLayer;
+    topLayer.numPeople = numberPeople;
+    topLayer.people = new Person[numberPeople];
+    for (int i = 0; i < numberPeople; ++i) {
+        topLayer.people[i] = {"Jaxon Doe", 3};
+    }
 
-    deepCopyPersonList(list);
+    PersonList deepList = deepCopyPersonList(topLayer);
 
-    delete[] list.people;
+    for (int i = 0; i < numberPeople; ++i) {
+        cout << "Person " << (i+1) << ": " << deepList.people[i].name << ", " << deepList.people[i].age << endl;
+    }
+
+    delete[] topLayer.people;
 
     return 0;
 }

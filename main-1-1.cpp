@@ -9,8 +9,8 @@ int main() {
 
     Person* people = createPersonArray(numberPeople);
 
-    for (int i =0; i<numberPeople; ++i) {
-        std::cout << "Person " << (i+1) << ": " << people[i].name << ", " << people[i].age << endl;
+    for (int i = 0; i < numberPeople; ++i) {
+        cout << "Person " << (i + 1) << ": " << people[i].name << ", " << people[i].age << endl;
     }
 
     delete[] people;
