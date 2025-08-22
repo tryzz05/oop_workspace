@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Person.h"
-#include "function-1-4.h"
 using namespace std;
 
 int main() {

@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Person.h"
-#include "function-1-4.h"
 
 Person *createPersonArray(int n)
 {
