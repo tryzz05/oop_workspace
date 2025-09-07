@@ -7,3 +7,4 @@ int Motorbike::getParkingDuration() const {
     int duration = static_cast<int>(now - getTimeOfEntry());
     return duration - (duration * 0.15);
 }
+ 

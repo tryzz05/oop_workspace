@@ -10,4 +10,4 @@ std::time_t Vehicle::getTimeOfEntry() const {
     return timeOfEntry;
 }
 
-Vehicle::~Vehicle() {}
+Vehicle::~Vehicle() {} 

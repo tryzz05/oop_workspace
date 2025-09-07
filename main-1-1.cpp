@@ -9,7 +9,7 @@ int main() {
     std::cin >> n;
 
     Vehicle** vehicles = new Vehicle*[n];
-
+ 
     for (int i = 0; i < n; i++) {
         std::cout << "Enter type of vehicle (1-Car, 2-Bus, 3-Motorbike): ";
         std::cin >> type;
