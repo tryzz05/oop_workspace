@@ -26,6 +26,6 @@ bool Appliance::get_isOn(){
     return isOn;
 }
 
-double Appliance::get_PowerConsumption(){
+double Appliance::getPowerConsumption(){
     return 0.0;
 }

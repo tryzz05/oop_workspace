@@ -11,7 +11,7 @@ int main(){
     a2.turnOn();
     std::cout << "Is 2nd appliance on?" << std::endl << (a2.get_isOn() ? "yes" : "no") << std::endl;
 
-    std::cout << "What is the power consumption?" << std::endl << a2.get_PowerConsumption() << std::endl;
+    std::cout << "What is the power consumption?" << std::endl << a2.getPowerConsumption() << std::endl;
 
     return 0;
 }
