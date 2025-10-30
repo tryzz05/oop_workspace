@@ -3,7 +3,7 @@
 #include <iostream>
 
 // TODO initialise the static member variable totalWeapons to 0
-static int totalWeapons = 0;
+int Weapon::totalWeapons = 0;
 
 Weapon::Weapon(const std::string& n, int d) : name(n), damage(d) {
     // TODO: increment totalWeapons count
