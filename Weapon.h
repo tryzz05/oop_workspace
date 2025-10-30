@@ -13,10 +13,7 @@ protected:
 
 public:
     // TODO declare an enum class 'Type' with two enumerators 'MELEE' & 'RANGED'
-    enum class Type {
-        MELEE,
-        RANGED;
-    }
+    enum class Type { MELEE, RANGED};
 
     // Constructor: initialize name and damage
     Weapon(const std::string& name, int damage);
